@@ -46,9 +46,15 @@ export default function Footer() {
           <p className="font-medium text-white text-sm mb-4">Informations</p>
           <Link
             href="/mentions-legales"
-            className="text-sm text-white/60 hover:text-white transition-colors"
+            className="block text-sm text-white/60 hover:text-white transition-colors"
           >
             Mentions légales
+          </Link>
+          <Link
+            href="/espace-gestion"
+            className="block mt-2 text-sm text-white/30 hover:text-white/60 transition-colors"
+          >
+            Espace gestion
           </Link>
         </div>
       </div>
