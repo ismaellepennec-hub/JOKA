@@ -5,9 +5,11 @@ import { supabase } from "@/lib/supabase";
 
 interface FormData {
   nom: string;
+  prenom: string;
   fonction: string;
   organisation: string;
   email: string;
+  contexte: string;
   message: string;
 }
 
@@ -16,9 +18,11 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 export default function ContactForm() {
   const [form, setForm] = useState<FormData>({
     nom: "",
+    prenom: "",
     fonction: "",
     organisation: "",
     email: "",
+    contexte: "",
     message: "",
   });
   const [status, setStatus] = useState<FormStatus>("idle");
@@ -69,6 +73,20 @@ export default function ContactForm() {
       </div>
 
       <div>
+        <label htmlFor="prenom" className="block text-sm font-medium text-navy mb-1.5">
+          Prénom
+        </label>
+        <input
+          id="prenom"
+          type="text"
+          required
+          value={form.prenom}
+          onChange={(e) => setForm({ ...form, prenom: e.target.value })}
+          className={inputClasses}
+        />
+      </div>
+
+      <div>
         <label htmlFor="fonction" className="block text-sm font-medium text-navy mb-1.5">
           Fonction
         </label>
@@ -108,6 +126,26 @@ export default function ContactForm() {
           onChange={(e) => setForm({ ...form, email: e.target.value })}
           className={inputClasses}
         />
+      </div>
+
+      <div>
+        <label htmlFor="contexte" className="block text-sm font-medium text-navy mb-1.5">
+          Contexte de la demande
+        </label>
+        <select
+          id="contexte"
+          value={form.contexte}
+          onChange={(e) => setForm({ ...form, contexte: e.target.value })}
+          className={inputClasses}
+        >
+          <option value="" disabled>
+            Sélectionnez votre contexte
+          </option>
+          <option value="structuration">Structuration du dispositif</option>
+          <option value="clarification">Besoin de clarification</option>
+          <option value="audit">Préparation d&apos;un audit / revue</option>
+          <option value="autre">Autre</option>
+        </select>
       </div>
 
       <div>
