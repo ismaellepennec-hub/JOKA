@@ -44,12 +44,13 @@ export default function Accueil() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-xl min-h-[400px]">
+            <div className="hidden md:block relative h-full min-h-[480px] rounded-xl overflow-hidden">
               <Image
                 src="/images/hero-bg.jpg"
-                alt="Cabinet JOCA Services"
+                alt="Stylo sur document — JOCA Services"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
+                priority
               />
             </div>
           </div>
