@@ -66,40 +66,40 @@ export default function Contact() {
       {/* BLOC 3 — FORMULAIRE */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-[1120px] px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-[1fr_320px] gap-16 items-start">
+
+            {/* Colonne gauche — formulaire */}
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-semibold text-navy max-w-3xl">
-                Prendre contact
-              </h2>
-              <p className="mt-4 text-navy/70 leading-relaxed">
-                Merci de préciser votre contexte. Chaque demande est analysée
-                avec attention et une réponse est apportée rapidement.
+              <h2 className="font-serif text-2xl font-semibold text-navy">Prendre contact</h2>
+              <p className="mt-3 text-navy/70 leading-relaxed">
+                Merci de préciser votre contexte. Chaque demande est analysée avec attention et une réponse est apportée rapidement.
               </p>
               <div className="mt-8">
                 <ContactForm />
               </div>
             </div>
 
-            <div className="md:pt-16">
-              <h3 className="font-serif text-xl font-semibold text-navy">
-                Contact direct
-              </h3>
-              <p className="mt-4 text-navy/70 text-sm leading-relaxed">
-                Vous pouvez également nous contacter directement par email.
-              </p>
-              <a
-                href="mailto:contact@joca-services.fr"
-                className="mt-3 inline-block text-navy font-medium hover:underline"
-              >
-                contact@joca-services.fr
-              </a>
-              <div className="border-t border-gray-border my-8" />
-              <p className="font-serif italic text-navy/70 text-sm leading-relaxed">
-                Chaque demande est analysée avec attention. Une réponse est
-                apportée rapidement afin de proposer un échange adapté à votre
-                situation.
-              </p>
+            {/* Colonne droite — sticky */}
+            <div className="md:sticky md:top-28 border border-gray-border rounded-xl p-8 space-y-6">
+              <div>
+                <h3 className="font-serif text-xl font-semibold text-navy">Contact direct</h3>
+                <p className="mt-2 text-sm text-navy/60 leading-relaxed">
+                  Vous pouvez également nous contacter directement par email.
+                </p>
+                <a
+                  href="mailto:contact@joca-services.fr"
+                  className="block mt-3 text-navy font-medium hover:underline"
+                >
+                  contact@joca-services.fr
+                </a>
+              </div>
+              <div className="border-t border-gray-border pt-6">
+                <p className="font-serif italic text-navy/60 text-sm leading-relaxed">
+                  Chaque demande est analysée avec attention. Une réponse est apportée rapidement afin de proposer un échange adapté à votre situation.
+                </p>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
