@@ -3,8 +3,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 
-const ADMIN_PASSWORD = "DelegataControl";
-
 interface Submission {
   id: string;
   nom: string;
@@ -22,12 +20,22 @@ export default function Admin() {
   const [submissions, setSubmissions] = useState<Submission[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === ADMIN_PASSWORD) {
-      setAuthenticated(true);
-      setError(false);
-    } else {
+    try {
+      const res = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+      const data = await res.json();
+      if (data.authenticated) {
+        setAuthenticated(true);
+        setError(false);
+      } else {
+        setError(true);
+      }
+    } catch {
       setError(true);
     }
   };
