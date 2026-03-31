@@ -127,89 +127,18 @@ export default function Accueil() {
             Nous intervenons pour structurer le dispositif et le rendre&nbsp;:
           </p>
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {/* Lisible */}
-            <div className="border border-gray-border p-6 flex flex-col items-center gap-3">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-navy"
-              >
-                <path d="M6 8h20M6 14h20M6 20h14M6 26h10" />
-              </svg>
-              <span className="font-serif font-semibold text-navy">
-                Lisible
-              </span>
-            </div>
-
-            {/* Cohérent */}
-            <div className="border border-gray-border p-6 flex flex-col items-center gap-3">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-navy"
-              >
-                <circle cx="10" cy="16" r="4" />
-                <circle cx="22" cy="16" r="4" />
-                <path d="M14 16h4" />
-              </svg>
-              <span className="font-serif font-semibold text-navy">
-                Cohérent
-              </span>
-            </div>
-
-            {/* Transmissible */}
-            <div className="border border-gray-border p-6 flex flex-col items-center gap-3">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-navy"
-              >
-                <path d="M12 16h12M20 12l4 4-4 4" />
-                <circle cx="8" cy="16" r="3" />
-              </svg>
-              <span className="font-serif font-semibold text-navy">
-                Transmissible
-              </span>
-            </div>
-
-            {/* Pilotable */}
-            <div className="border border-gray-border p-6 flex flex-col items-center gap-3">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-navy"
-              >
-                <path d="M6 26V14M12 26V10M18 26V18M24 26V6" />
-              </svg>
-              <span className="font-serif font-semibold text-navy">
-                Pilotable
-              </span>
-            </div>
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 max-w-2xl">
+            {[
+              { label: "Lisible" },
+              { label: "Cohérent" },
+              { label: "Transmissible" },
+              { label: "Pilotable" },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center gap-3">
+                <span className="block w-4 h-px bg-navy/30 flex-shrink-0" />
+                <span className="font-serif text-lg font-semibold text-navy">{item.label}</span>
+              </div>
+            ))}
           </div>
 
           <div className="mt-10 space-y-2 text-navy/70 leading-relaxed">
