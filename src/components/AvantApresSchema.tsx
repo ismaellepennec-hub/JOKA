@@ -1,75 +1,130 @@
 export default function AvantApresSchema() {
   return (
     <div className="mt-12">
-      <svg width="100%" viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg">
+      {/* Titre */}
+      <p className="font-serif text-xl md:text-2xl font-semibold text-navy text-center mb-8">
+        D&apos;un dispositif dispersé à un dispositif structuré et pilotable
+      </p>
+
+      <svg
+        width="100%"
+        viewBox="0 0 860 310"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <defs>
-          <marker id="arrow-aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <marker
+            id="arrow-aa"
+            viewBox="0 0 10 10"
+            refX="8"
+            refY="5"
+            markerWidth="6"
+            markerHeight="6"
+            orient="auto-start-reverse"
+          >
+            <path
+              d="M2 1L8 5L2 9"
+              fill="none"
+              stroke="context-stroke"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </marker>
         </defs>
 
-        {/* Labels */}
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="160" y="28" textAnchor="middle" fill="currentColor" opacity="0.4">Avant</text>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="520" y="28" textAnchor="middle" fill="currentColor" opacity="0.4">Après</text>
-        <line x1="340" y1="38" x2="340" y2="318" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 4" opacity="0.15"/>
+        {/* ============================== */}
+        {/*         CÔTÉ AVANT             */}
+        {/* ============================== */}
+
+        <text
+          fontFamily="var(--font-inter), sans-serif"
+          fontSize="11"
+          fontWeight="500"
+          x="185"
+          y="20"
+          textAnchor="middle"
+          fill="currentColor"
+          opacity="0.4"
+          letterSpacing="0.05em"
+        >
+          AVANT
+        </text>
+
+        {/* Bloc 1 — Informations éparpillées */}
+        <rect x="40" y="42" width="190" height="44" rx="6" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.7" opacity="0.4" />
+        <text fontFamily="var(--font-inter), sans-serif" fontSize="12" x="135" y="68" textAnchor="middle" fill="currentColor" opacity="0.55">Informations éparpillées</text>
+
+        {/* Bloc 2 — Dépendance aux personnes */}
+        <rect x="120" y="112" width="196" height="44" rx="6" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.7" opacity="0.4" />
+        <text fontFamily="var(--font-inter), sans-serif" fontSize="12" x="218" y="138" textAnchor="middle" fill="currentColor" opacity="0.55">Dépendance aux personnes</text>
+
+        {/* Bloc 3 — Difficulté de lecture globale */}
+        <rect x="55" y="182" width="210" height="44" rx="6" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.7" opacity="0.4" />
+        <text fontFamily="var(--font-inter), sans-serif" fontSize="12" x="160" y="208" textAnchor="middle" fill="currentColor" opacity="0.55">Difficulté de lecture globale</text>
+
+        {/* Traits désordonnés — uniquement dans les espaces vides entre blocs */}
+        {/* Bas-droit de bloc1 → haut-gauche de bloc2 (espace entre les 2) */}
+        <line x1="200" y1="86" x2="155" y2="112" stroke="currentColor" strokeWidth="0.6" strokeDasharray="3 3" opacity="0.18" />
+        {/* Bas-gauche de bloc1 → gauche de bloc3 (passe dans la marge gauche) */}
+        <line x1="55" y1="86" x2="60" y2="182" stroke="currentColor" strokeWidth="0.6" strokeDasharray="3 3" opacity="0.15" />
+        {/* Bas-droit de bloc2 → haut-droit de bloc3 (espace entre les 2) */}
+        <line x1="260" y1="156" x2="240" y2="182" stroke="currentColor" strokeWidth="0.6" strokeDasharray="3 3" opacity="0.18" />
+        {/* Bas de bloc1 côté gauche → gauche de bloc2 */}
+        <line x1="70" y1="86" x2="130" y2="112" stroke="currentColor" strokeWidth="0.6" strokeDasharray="3 3" opacity="0.12" />
+
+        {/* Sous-label */}
+        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="185" y="262" textAnchor="middle" fill="currentColor" opacity="0.35">Dispersé — difficile à présenter</text>
+
+        {/* ============================== */}
+        {/*       SÉPARATION CENTRALE      */}
+        {/* ============================== */}
+
+        <line x1="405" y1="32" x2="405" y2="250" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 4" opacity="0.15" />
 
         {/* Flèche centrale */}
-        <line x1="316" y1="180" x2="360" y2="180" stroke="currentColor" strokeWidth="1.2" opacity="0.4" markerEnd="url(#arrow-aa)"/>
+        <line x1="360" y1="145" x2="420" y2="145" stroke="currentColor" strokeWidth="1.4" opacity="0.45" markerEnd="url(#arrow-aa)" />
 
-        {/* AVANT */}
-        <rect x="30" y="55" width="90" height="30" rx="4" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="75" y="70" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.5">Équipe A</text>
+        {/* ============================== */}
+        {/*         CÔTÉ APRÈS             */}
+        {/* ============================== */}
 
-        <rect x="185" y="70" width="90" height="30" rx="4" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="230" y="85" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.5">Équipe B</text>
+        <text
+          fontFamily="var(--font-inter), sans-serif"
+          fontSize="11"
+          fontWeight="500"
+          x="630"
+          y="20"
+          textAnchor="middle"
+          fill="currentColor"
+          opacity="0.4"
+          letterSpacing="0.05em"
+        >
+          APRÈS
+        </text>
 
-        <rect x="42" y="148" width="90" height="30" rx="4" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="87" y="163" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.5">Contrôles</text>
+        {/* Bloc — Organisation claire (haut) */}
+        <rect x="540" y="38" width="180" height="40" rx="6" fill="currentColor" fillOpacity="0.03" stroke="currentColor" strokeWidth="0.6" opacity="0.4" />
+        <text fontFamily="var(--font-inter), sans-serif" fontSize="12" x="630" y="62" textAnchor="middle" fill="currentColor" opacity="0.55">Organisation claire</text>
+        <line x1="630" y1="78" x2="630" y2="106" stroke="currentColor" strokeWidth="0.9" opacity="0.3" markerEnd="url(#arrow-aa)" />
 
-        <rect x="178" y="165" width="90" height="30" rx="4" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="223" y="180" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.5">Preuves</text>
+        {/* Bloc central — Dispositif structuré */}
+        <rect x="540" y="108" width="180" height="56" rx="8" fill="currentColor" fillOpacity="0.06" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
+        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="630" y="130" textAnchor="middle" fill="currentColor" opacity="0.4">Dispositif</text>
+        <text fontFamily="var(--font-cormorant), serif" fontSize="17" fontWeight="600" x="630" y="152" textAnchor="middle" fill="currentColor">structuré</text>
 
-        <rect x="55" y="245" width="90" height="30" rx="4" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="100" y="260" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.5">Délégataires</text>
+        {/* Bloc — Responsabilités identifiées (droite) */}
+        <rect x="742" y="112" width="100" height="48" rx="6" fill="currentColor" fillOpacity="0.03" stroke="currentColor" strokeWidth="0.6" opacity="0.4" />
+        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="792" y="133" textAnchor="middle" fill="currentColor" opacity="0.55">Responsabilités</text>
+        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="792" y="148" textAnchor="middle" fill="currentColor" opacity="0.55">identifiées</text>
+        <line x1="742" y1="136" x2="722" y2="136" stroke="currentColor" strokeWidth="0.9" opacity="0.3" markerEnd="url(#arrow-aa)" />
 
-        <rect x="175" y="258" width="90" height="30" rx="4" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="220" y="273" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.5">Gouvernance</text>
+        {/* Bloc — Lecture consolidée (bas) */}
+        <rect x="540" y="194" width="180" height="40" rx="6" fill="currentColor" fillOpacity="0.03" stroke="currentColor" strokeWidth="0.6" opacity="0.4" />
+        <text fontFamily="var(--font-inter), sans-serif" fontSize="12" x="630" y="218" textAnchor="middle" fill="currentColor" opacity="0.55">Lecture consolidée</text>
+        <line x1="630" y1="194" x2="630" y2="166" stroke="currentColor" strokeWidth="0.9" opacity="0.3" markerEnd="url(#arrow-aa)" />
 
-        {/* Traits désordonnés */}
-        <line x1="120" y1="70" x2="185" y2="180" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.2"/>
-        <line x1="75" y1="85" x2="178" y2="165" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.2"/>
-        <line x1="230" y1="100" x2="87" y2="148" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.2"/>
-        <line x1="132" y1="163" x2="178" y2="180" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.2"/>
-        <line x1="100" y1="178" x2="175" y2="258" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.2"/>
-        <line x1="223" y1="195" x2="145" y2="245" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.2"/>
-        <line x1="120" y1="70" x2="220" y2="258" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.2"/>
-        <line x1="268" y1="85" x2="55" y2="245" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.2"/>
-        <line x1="87" y1="178" x2="220" y2="258" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 3" opacity="0.2"/>
-
-        {/* APRÈS */}
-        <rect x="400" y="148" width="110" height="52" rx="8" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="1" opacity="0.5"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="455" y="163" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.4">Gouvernance</text>
-        <text fontFamily="var(--font-cormorant), serif" fontSize="16" fontWeight="600" x="455" y="183" textAnchor="middle" dominantBaseline="central" fill="currentColor">centrale</text>
-
-        <rect x="420" y="60" width="80" height="30" rx="4" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="460" y="75" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.5">Équipe A</text>
-        <line x1="460" y1="90" x2="455" y2="146" stroke="currentColor" strokeWidth="0.8" opacity="0.3" markerEnd="url(#arrow-aa)"/>
-
-        <rect x="560" y="90" width="80" height="30" rx="4" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="600" y="105" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.5">Équipe B</text>
-        <line x1="560" y1="108" x2="512" y2="160" stroke="currentColor" strokeWidth="0.8" opacity="0.3" markerEnd="url(#arrow-aa)"/>
-
-        <rect x="560" y="215" width="80" height="30" rx="4" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="600" y="230" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.5">Contrôles</text>
-        <line x1="560" y1="225" x2="512" y2="192" stroke="currentColor" strokeWidth="0.8" opacity="0.3" markerEnd="url(#arrow-aa)"/>
-
-        <rect x="420" y="258" width="80" height="30" rx="4" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="460" y="273" textAnchor="middle" dominantBaseline="central" fill="currentColor" opacity="0.5">Preuves</text>
-        <line x1="460" y1="258" x2="455" y2="202" stroke="currentColor" strokeWidth="0.8" opacity="0.3" markerEnd="url(#arrow-aa)"/>
-
-        {/* Labels bas */}
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="160" y="318" textAnchor="middle" fill="currentColor" opacity="0.35">Dispersé — difficile à présenter</text>
-        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="520" y="318" textAnchor="middle" fill="currentColor" opacity="0.35">Structuré — lisible et démontrable</text>
+        {/* Sous-label */}
+        <text fontFamily="var(--font-inter), sans-serif" fontSize="11" x="630" y="262" textAnchor="middle" fill="currentColor" opacity="0.35">Structuré — lisible et démontrable</text>
       </svg>
     </div>
   );

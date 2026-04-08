@@ -221,8 +221,9 @@ export default function Methode() {
         </div>
       </section>
 
-      {/* SCHÉMA DELEGATACONTROL™ */}
+      {/* SCHÉMA DELEGATACONTROL™ — Linéaire */}
       <DelegataControlSchema />
+
 
       {/* BLOC 5 — CIBLE */}
       <section className="bg-gray-light py-20">
