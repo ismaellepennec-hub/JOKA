@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CTAButton from "@/components/CTAButton";
+import AvantApresSchema from "@/components/AvantApresSchema";
 import DelegataControlSimplified from "@/components/DelegataControlSimplified";
 
 export const metadata: Metadata = {
@@ -15,18 +16,17 @@ export default function Offre() {
       <section className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-[1120px] px-6">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-navy max-w-3xl leading-tight">
-            Structurer le contrôle des délégataires pour qu&apos;il soit lisible,
-            pilotable et démontrable
+            Rendre le contrôle des délégataires lisible et démontrable
           </h1>
           <div className="mt-8 max-w-2xl space-y-4 text-navy/70 leading-relaxed">
             <p>
-              Vos contrôles existent. Mais les preuves sont dispersées, les
-              formats hétérogènes et personne ne peut en donner une lecture
-              claire et consolidée.
+              Vos contrôles existent.
+              Mais les preuves sont dispersées, les formats hétérogènes et la
+              lecture du dispositif reste fragmentée.
             </p>
             <p className="font-medium text-navy">
-              Nous structurons l&apos;ensemble pour le rendre compréhensible et
-              mobilisable à tout moment.
+              Nous structurons l&apos;ensemble pour le rendre compréhensible,
+              pilotable et mobilisable à tout moment.
             </p>
           </div>
           <div className="mt-10">
@@ -38,18 +38,16 @@ export default function Offre() {
         </div>
       </section>
 
-      {/* BLOC 2 — TENSION */}
-      <section className="bg-navy py-16">
-        <div className="mx-auto max-w-[1120px] px-6">
-          <p className="font-serif italic text-2xl md:text-3xl text-white max-w-3xl mx-auto text-center leading-relaxed">
-            Un dispositif peut fonctionner au quotidien… et devenir difficile à
-            expliquer, à consolider ou à défendre dès qu&apos;il doit être
-            présenté.
-          </p>
-        </div>
+      {/* VISUEL TRANSFORMATION — AVANT/APRÈS */}
+      <section className="bg-gray-light">
+        <AvantApresSchema
+          variant="two-col"
+          title="D'un dispositif difficile à expliquer à un dispositif lisible et démontrable"
+          baseline="Structuré = lisible, pilotable et démontrable à tout moment"
+        />
       </section>
 
-      {/* BLOC 3 — INTRO OFFRE */}
+      {/* BLOC 2 — INTRO */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-[1120px] px-6">
           <p className="font-serif text-2xl md:text-3xl text-navy max-w-3xl leading-relaxed">
@@ -63,7 +61,28 @@ export default function Offre() {
         </div>
       </section>
 
-      {/* BLOC 4 — BRIQUE 1 : DIAGNOSTIC */}
+      {/* BLOC 3 — INTRODUCTION DÉTAILLÉE */}
+      <section className="bg-gray-light py-16">
+        <div className="mx-auto max-w-[1120px] px-6">
+          <h2 className="font-serif text-2xl md:text-3xl font-semibold text-navy max-w-3xl leading-relaxed">
+            Trois briques pour transformer votre dispositif en un système
+            lisible, pilotable et défendable
+          </h2>
+          <div className="mt-6 max-w-2xl space-y-4 text-navy/70 leading-relaxed">
+            <p>
+              Notre approche ne consiste pas à ajouter des contrôles.
+            </p>
+            <p>
+              Elle consiste à structurer l&apos;existant&nbsp;: les
+              informations, les preuves, les responsabilités et la gouvernance,
+              afin d&apos;obtenir une lecture claire, indépendante et consolidée
+              du dispositif.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* BLOC 3 — BRIQUE 1 : DIAGNOSTIC */}
       <section className="bg-gray-light py-20">
         <div className="mx-auto max-w-[1120px] px-6">
           <p className="text-xs font-medium text-navy/40 uppercase tracking-widest">
@@ -78,9 +97,9 @@ export default function Offre() {
 
           <div className="mt-8 max-w-2xl space-y-4 text-navy/70 leading-relaxed">
             <p>
-              Dans la plupart des organisations, le dispositif existe déjà. Mais
-              il est réparti, peu lisible et difficile à présenter de manière
-              consolidée.
+              Dans la plupart des organisations, le dispositif existe déjà.
+              Mais il est réparti entre plusieurs acteurs, supports et formats,
+              ce qui le rend difficile à lire dans son ensemble.
             </p>
           </div>
 
@@ -90,23 +109,28 @@ export default function Offre() {
           <ul className="mt-4 list-none space-y-2 text-navy/70 max-w-2xl">
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Analyse des délégations en place</span>
+              <span>
+                Compréhension du fonctionnement réel du dispositif
+              </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Revue des contrôles réalisés</span>
+              <span>Lecture des contrôles effectivement réalisés</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Identification des responsabilités</span>
+              <span>Identification des responsabilités et des rôles</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Analyse des preuves disponibles</span>
+              <span>
+                Analyse des preuves et supports existants (mails, fichiers,
+                outils…)
+              </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Évaluation de la gouvernance</span>
+              <span>Évaluation de la gouvernance en place</span>
             </li>
           </ul>
 
@@ -116,7 +140,9 @@ export default function Offre() {
           <ul className="mt-4 list-none space-y-2 text-navy/70 max-w-2xl">
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Une vision claire du dispositif réel</span>
+              <span>
+                Une vision claire et consolidée du dispositif
+              </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
@@ -124,13 +150,26 @@ export default function Offre() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
+              <span>
+                Une lecture indépendante, non dépendante des individus
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-navy/40">·</span>
               <span>Un plan d&apos;actions priorisé</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-navy/40">·</span>
+              <span>
+                Une première base de quantification (volumes, répartition,
+                couverture des contrôles)
+              </span>
             </li>
           </ul>
 
           <p className="mt-6 font-medium text-navy max-w-2xl leading-relaxed">
             L&apos;objectif n&apos;est pas d&apos;ajouter des contrôles, mais de
-            rendre le dispositif lisible et démontrable.
+            rendre le dispositif lisible, pilotable et démontrable.
           </p>
         </div>
       </section>
@@ -142,7 +181,7 @@ export default function Offre() {
         </div>
       </section>
 
-      {/* BLOC 5 — BRIQUE 2 : STRUCTURATION */}
+      {/* BLOC 4 — BRIQUE 2 : STRUCTURATION */}
       <section className="bg-gray-light py-20">
         <div className="mx-auto max-w-[1120px] px-6">
           <p className="text-xs font-medium text-navy/40 uppercase tracking-widest">
@@ -152,13 +191,13 @@ export default function Offre() {
             Structuration opérationnelle
           </h2>
           <p className="mt-2 font-serif text-lg italic text-navy/60">
-            Mettre en place un dispositif cohérent, structuré et pilotable
+            Structurer le dispositif pour le rendre exploitable
           </p>
 
           <div className="mt-8 max-w-2xl space-y-4 text-navy/70 leading-relaxed">
             <p>
               À partir du diagnostic, nous structurons le dispositif pour le
-              rendre exploitable et compréhensible par l&apos;ensemble des
+              rendre lisible, cohérent et utilisable par l&apos;ensemble des
               parties prenantes.
             </p>
           </div>
@@ -173,7 +212,7 @@ export default function Offre() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Formalisation des processus</span>
+              <span>Formalisation des processus de contrôle</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
@@ -181,11 +220,11 @@ export default function Offre() {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Organisation du pilotage</span>
+              <span>Organisation des informations et des preuves</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Consolidation de la gouvernance</span>
+              <span>Mise en cohérence du dispositif global</span>
             </li>
           </ul>
 
@@ -195,11 +234,23 @@ export default function Offre() {
           <ul className="mt-4 list-none space-y-2 text-navy/70 max-w-2xl">
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Un dispositif structuré et lisible</span>
+              <span>Un dispositif structuré et compréhensible</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Une réduction de la dépendance aux individus</span>
+              <span>Une lecture consolidée des contrôles</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-navy/40">·</span>
+              <span>
+                Une réduction de la dépendance aux individus
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-navy/40">·</span>
+              <span>
+                Une capacité à mobiliser le dispositif rapidement
+              </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
@@ -207,11 +258,18 @@ export default function Offre() {
                 Une capacité à démontrer les contrôles à tout moment
               </span>
             </li>
+            <li className="flex items-start gap-2">
+              <span className="text-navy/40">·</span>
+              <span>
+                Une meilleure lisibilité des volumes et de la couverture des
+                contrôles
+              </span>
+            </li>
           </ul>
         </div>
       </section>
 
-      {/* BLOC 6 — BRIQUE 3 : MONITORING */}
+      {/* BLOC 5 — BRIQUE 3 : MONITORING */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-[1120px] px-6">
           <p className="text-xs font-medium text-navy/40 uppercase tracking-widest">
@@ -221,7 +279,7 @@ export default function Offre() {
             Gouvernance &amp; monitoring
           </h2>
           <p className="mt-2 font-serif text-lg italic text-navy/60">
-            Maintenir la cohérence du dispositif dans le temps
+            Maintenir un dispositif lisible et pilotable dans la durée
           </p>
 
           <div className="mt-8 max-w-2xl space-y-4 text-navy/70 leading-relaxed">
@@ -237,21 +295,21 @@ export default function Offre() {
           <ul className="mt-4 list-none space-y-2 text-navy/70 max-w-2xl">
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Suivi de l&apos;évolution du dispositif</span>
+              <span>Revue régulière du dispositif</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Ajustement des contrôles</span>
+              <span>Détection des zones de fragilité</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-navy/40">·</span>
+              <span>Ajustements ciblés</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
               <span>
                 Accompagnement des évolutions organisationnelles
               </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-navy/40">·</span>
-              <span>Identification des dérives</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
@@ -275,11 +333,24 @@ export default function Offre() {
               <span className="text-navy/40">·</span>
               <span>Une lisibilité maintenue</span>
             </li>
+            <li className="flex items-start gap-2">
+              <span className="text-navy/40">·</span>
+              <span>
+                Un dispositif durablement pilotable et défendable
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-navy/40">·</span>
+              <span>
+                Une vision suivie des évolutions (écarts, ajustements,
+                cohérence)
+              </span>
+            </li>
           </ul>
         </div>
       </section>
 
-      {/* BLOC 7 — DIFFÉRENCIATION */}
+      {/* BLOC 6 — DIFFÉRENCIATION */}
       <section className="bg-gray-light py-20">
         <div className="mx-auto max-w-[1120px] px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl">
@@ -296,7 +367,9 @@ export default function Offre() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-navy/40">–</span>
-                  <span>Produire des livrables théoriques</span>
+                  <span>
+                    Produire des livrables théoriques non exploitables
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-navy/40">–</span>
@@ -333,7 +406,8 @@ export default function Offre() {
                 <li className="flex items-start gap-2">
                   <span className="text-navy/40">–</span>
                   <span>
-                    Une réduction de la dépendance aux individus
+                    Une réduction de la dépendance aux individus et aux formats
+                    d&apos;information
                   </span>
                 </li>
               </ul>
@@ -342,46 +416,19 @@ export default function Offre() {
         </div>
       </section>
 
-      {/* BLOC 8 — MODALITÉS + CTA FINAL */}
+      {/* BLOC 7 — CTA FINAL */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-[1120px] px-6">
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-navy max-w-3xl">
-            Modalités d&apos;intervention
-          </h2>
-          <p className="mt-6 text-navy/70 max-w-2xl leading-relaxed">
-            Chaque intervention est construite après un premier échange, en
-            fonction&nbsp;:
-          </p>
-          <ul className="mt-4 list-none space-y-2 text-navy/70 max-w-2xl">
-            <li className="flex items-start gap-2">
-              <span className="text-navy mt-0.5">—</span>
-              <span>de la maturité du dispositif</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-navy mt-0.5">—</span>
-              <span>du niveau de structuration existant</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-navy mt-0.5">—</span>
-              <span>des enjeux de gouvernance</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-navy mt-0.5">—</span>
-              <span>du périmètre concerné</span>
-            </li>
-          </ul>
-
-          <div className="border-t border-gray-border mt-12 mb-12" />
-
-          <div className="bg-navy rounded-xl py-12 px-8 text-center">
-            <p className="text-white/80 leading-relaxed max-w-xl mx-auto">
-              Vous souhaitez structurer votre dispositif et le rendre mobilisable
-              à tout moment&nbsp;?
+          <div className="bg-navy rounded-xl py-16 px-8 text-center">
+            <p className="text-white/90 leading-relaxed max-w-xl mx-auto text-lg">
+              Vous souhaitez structurer votre dispositif et le rendre
+              mobilisable et défendable à tout moment&nbsp;?
             </p>
             <div className="mt-8">
               <CTAButton
                 href="/contact"
-                label="Faire un point sur votre situation"
+                label="Demander un échange stratégique"
+                variant="light"
               />
             </div>
           </div>

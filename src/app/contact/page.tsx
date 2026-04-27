@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
-import CTAButton from "@/components/CTAButton";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -31,40 +30,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* BLOC 2 — FILTRAGE */}
-      <section className="bg-gray-light py-20">
-        <div className="mx-auto max-w-[1120px] px-6">
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-navy max-w-3xl">
-            Les échanges s&apos;adressent principalement à
-          </h2>
-          <ul className="mt-8 list-none space-y-2 max-w-xl">
-            <li className="flex items-start gap-2 text-navy/70">
-              <span className="text-navy mt-0.5">—</span>
-              <span>directions conformité</span>
-            </li>
-            <li className="flex items-start gap-2 text-navy/70">
-              <span className="text-navy mt-0.5">—</span>
-              <span>directions risques</span>
-            </li>
-            <li className="flex items-start gap-2 text-navy/70">
-              <span className="text-navy mt-0.5">—</span>
-              <span>directions contrôle interne</span>
-            </li>
-            <li className="flex items-start gap-2 text-navy/70">
-              <span className="text-navy mt-0.5">—</span>
-              <span>
-                directions métiers impliquées dans la gestion des délégataires
-              </span>
-            </li>
-          </ul>
-          <p className="mt-4 text-navy/70 leading-relaxed">
-            Dans des organisations disposant déjà d&apos;un dispositif existant
-            et souhaitant le structurer durablement.
-          </p>
-        </div>
-      </section>
-
-      {/* BLOC 3 — FORMULAIRE + SIDEBAR */}
+      {/* BLOC 2 — FORMULAIRE + SIDEBAR */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-[1120px] px-6">
           <div className="mt-12 grid grid-cols-1 md:grid-cols-[1fr_320px] gap-16 items-start">
@@ -80,25 +46,6 @@ export default function Contact() {
               </p>
               <div className="mt-8">
                 <ContactForm />
-              </div>
-
-              {/* Bloc prise de RDV */}
-              <div className="mt-12 border-t border-gray-border pt-10">
-                <h3 className="font-serif text-xl font-semibold text-navy">
-                  Planifier un échange
-                </h3>
-                <p className="mt-3 text-navy/70 leading-relaxed">
-                  Si votre sujet correspond au périmètre d&apos;intervention du
-                  cabinet, vous pouvez directement réserver un créneau
-                  d&apos;échange.
-                </p>
-                <div className="mt-6">
-                  <CTAButton
-                    href="#"
-                    label="Accéder à l'agenda"
-                    variant="outline"
-                  />
-                </div>
               </div>
             </div>
 

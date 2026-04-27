@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CTAButton from "@/components/CTAButton";
+import AvantApresSchema from "@/components/AvantApresSchema";
 import DelegataControlSchema from "@/components/DelegataControlSchema";
 import ManifestoQuote from "@/components/ManifestoQuote";
 
@@ -16,18 +17,18 @@ export default function Methode() {
       <section className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-[1120px] px-6">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-navy max-w-3xl leading-tight">
-            Une méthode pour rendre le contrôle des délégataires lisible,
-            structuré et mobilisable à tout moment
+            Une méthode pour rendre votre dispositif de contrôle lisible,
+            pilotable et démontrable
           </h1>
           <div className="mt-8 max-w-2xl space-y-4 text-navy/70 leading-relaxed">
             <p>
-              Dans la plupart des organisations, le dispositif existe. Mais il
-              reste difficile à expliquer clairement, à consolider ou à
-              transmettre sans dépendre de certaines personnes.
+              Un dispositif peut fonctionner… tout en restant difficile à
+              expliquer, à consolider et à mobiliser rapidement.
             </p>
             <p className="font-medium text-navy">
-              DelegataControl™ apporte une structure claire, cohérente et
-              durable.
+              DelegataControl™ permet de structurer les informations, les
+              preuves et la gouvernance pour obtenir une lecture claire,
+              indépendante et durable.
             </p>
           </div>
         </div>
@@ -42,6 +43,14 @@ export default function Methode() {
             de ceux qui les connaissent.
           </p>
         </div>
+      </section>
+
+      {/* VISUEL AVANT/APRÈS — inséré entre tension et "Un principe simple" */}
+      <section className="bg-gray-light">
+        <AvantApresSchema
+          variant="two-col"
+          title="D'un dispositif difficile à exploiter à un dispositif structuré et démontrable"
+        />
       </section>
 
       {/* BLOC 3 — PRINCIPE DE LA MÉTHODE */}
@@ -84,7 +93,7 @@ export default function Methode() {
               <li className="flex items-start gap-2">
                 <span className="text-navy/40">–</span>
                 <span>
-                  des supports hétérogènes (mails, fichiers, outils…)
+                  des informations dispersées entre mails, fichiers et outils
                 </span>
               </li>
               <li className="flex items-start gap-2">
@@ -97,6 +106,12 @@ export default function Methode() {
                 <span className="text-navy/40">–</span>
                 <span>
                   une connaissance détenue par certaines personnes
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-navy/40">–</span>
+                <span className="font-medium text-navy">
+                  difficiles à mobiliser rapidement en cas de besoin
                 </span>
               </li>
             </ul>
@@ -123,7 +138,7 @@ export default function Methode() {
                 Clarifier
               </h3>
               <p className="mt-4 text-navy/70 leading-relaxed">
-                Comprendre le fonctionnement réel du dispositif&nbsp;:
+                Comprendre comment le dispositif fonctionne réellement&nbsp;:
               </p>
               <ul className="mt-2 list-none space-y-2 text-navy/70">
                 <li className="flex items-start gap-2">
@@ -160,7 +175,7 @@ export default function Methode() {
                 Structurer
               </h3>
               <p className="mt-4 text-navy/70 leading-relaxed">
-                Organiser le dispositif de manière cohérente&nbsp;:
+                Structurer le dispositif pour le rendre exploitable&nbsp;:
               </p>
               <ul className="mt-2 list-none space-y-2 text-navy/70">
                 <li className="flex items-start gap-2">
@@ -193,7 +208,8 @@ export default function Methode() {
                 Stabiliser
               </h3>
               <p className="mt-4 text-navy/70 leading-relaxed">
-                Maintenir la cohérence dans le temps&nbsp;:
+                Maintenir un dispositif stable et pilotable dans le
+                temps&nbsp;:
               </p>
               <ul className="mt-2 list-none space-y-2 text-navy/70">
                 <li className="flex items-start gap-2">
@@ -224,7 +240,6 @@ export default function Methode() {
       {/* SCHÉMA DELEGATACONTROL™ — Linéaire */}
       <DelegataControlSchema />
 
-
       {/* BLOC 5 — CIBLE */}
       <section className="bg-gray-light py-20">
         <div className="mx-auto max-w-[1120px] px-6">
@@ -233,15 +248,12 @@ export default function Methode() {
           </h2>
           <div className="mt-8 max-w-2xl space-y-4 text-navy/70 leading-relaxed">
             <p>
-              Cette approche s&apos;adresse principalement aux mutuelles et
-              institutions de prévoyance disposant déjà d&apos;un dispositif de
-              contrôle des délégataires et souhaitant en renforcer la lisibilité,
-              la cohérence et la gouvernance.
+              Cette approche s&apos;adresse aux mutuelles et institutions de
+              prévoyance disposant déjà d&apos;un dispositif de contrôle…
             </p>
-            <p>
-              Elle est particulièrement pertinente lorsque plusieurs directions
-              interviennent dans le suivi des délégataires et que le dispositif
-              nécessite d&apos;être clarifié ou consolidé.
+            <p className="font-medium text-navy">
+              …mais nécessitant d&apos;être clarifié, structuré et consolidé
+              pour être réellement exploitable.
             </p>
           </div>
 

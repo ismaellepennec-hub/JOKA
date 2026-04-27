@@ -1,34 +1,41 @@
 export default function DelegataControlSimplified() {
   return (
     <div className="my-16">
+      {/* Titre */}
+      <h3 className="font-serif text-2xl md:text-3xl font-semibold text-navy text-center">
+        Des livrables structurés, exploitables et défendables
+      </h3>
+      <div className="w-16 h-px bg-navy/20 mx-auto mt-6 mb-12" />
+
       {/* Schéma 3 blocs */}
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-0 items-stretch">
-        {/* Bloc 1 — Dispersé */}
+      <div className="grid grid-cols-1 gap-0 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:gap-0 items-stretch">
+        {/* Bloc 1 — Ce que nous analysons */}
         <div className="bg-gray-light border border-gray-border rounded-lg p-6">
-          <h4 className="font-serif text-lg font-semibold text-navy">
-            Dispositif dispersé
+          <h4 className="font-serif text-lg font-semibold text-navy border-b border-gray-border pb-4 mb-4 md:h-[60px] flex items-end">
+            Ce que nous analysons
           </h4>
-          <ul className="mt-4 list-none space-y-2 text-sm text-navy/70">
+          <ul className="list-none space-y-2 text-sm text-navy/70">
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Contrôles existants</span>
+              <span>Délégations en place</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Preuves éparpillées</span>
+              <span>Contrôles réalisés</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Formats multiples</span>
+              <span>Responsabilités</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-navy/40">·</span>
-              <span>Dépendance à certains individus</span>
+              <span>Preuves existantes</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-navy/40">·</span>
+              <span>Gouvernance actuelle</span>
             </li>
           </ul>
-          <p className="mt-4 text-xs text-navy/50 leading-relaxed">
-            Difficile à expliquer, à consolider et à présenter
-          </p>
         </div>
 
         {/* Flèche 1 → 2 */}
@@ -43,24 +50,31 @@ export default function DelegataControlSimplified() {
           </svg>
         </div>
 
-        {/* Bloc 2 — DelegataControl™ */}
+        {/* Bloc 2 — Structuration DelegataControl™ */}
         <div className="bg-navy rounded-lg p-6 text-white">
-          <h4 className="font-serif text-lg font-semibold text-center">
-            DelegataControl™
+          <h4 className="font-serif text-lg font-semibold text-center border-b border-white/20 pb-4 mb-4 md:md:h-[60px] flex items-end justify-center">
+            <span>Structuration DelegataControl™</span>
           </h4>
-          <div className="mt-6 flex flex-col items-center gap-3">
-            <div className="flex items-center gap-2 text-sm">
-              <span className="font-medium">Clarifier</span>
-              <span className="text-white/40">→</span>
-              <span className="font-medium">Structurer</span>
-              <span className="text-white/40">→</span>
-              <span className="font-medium">Stabiliser</span>
-            </div>
+          <div className="flex items-center justify-center gap-2 text-sm">
+            <span className="font-medium">Clarifier</span>
+            <span className="text-white/40">→</span>
+            <span className="font-medium">Structurer</span>
+            <span className="text-white/40">→</span>
+            <span className="font-medium">Stabiliser</span>
           </div>
-          <div className="mt-6 space-y-2 text-xs text-white/60">
-            <p>Clarifier : comprendre le fonctionnement réel</p>
-            <p>Structurer : organiser contrôles, responsabilités et preuves</p>
-            <p>Stabiliser : maintenir la cohérence dans le temps</p>
+          <div className="mt-6 space-y-3 text-sm text-white/70">
+            <div>
+              <p className="font-medium text-white/90">Clarifier</p>
+              <p>Comprendre le fonctionnement réel</p>
+            </div>
+            <div>
+              <p className="font-medium text-white/90">Structurer</p>
+              <p>Organiser contrôles, responsabilités et preuves</p>
+            </div>
+            <div>
+              <p className="font-medium text-white/90">Stabiliser</p>
+              <p>Maintenir la cohérence dans le temps</p>
+            </div>
           </div>
         </div>
 
@@ -76,39 +90,39 @@ export default function DelegataControlSimplified() {
           </svg>
         </div>
 
-        {/* Bloc 3 — Structuré */}
-        <div className="bg-[#0a1a2e] rounded-lg p-6 text-white">
-          <h4 className="font-serif text-lg font-semibold">
-            Dispositif structuré
+        {/* Bloc 3 — Ce que vous obtenez */}
+        <div className="bg-gray-light border border-gray-border rounded-lg p-6">
+          <h4 className="font-serif text-lg font-semibold text-navy border-b border-gray-border pb-4 mb-4 md:h-[60px] flex items-end">
+            Ce que vous obtenez
           </h4>
-          <ul className="mt-4 list-none space-y-2 text-sm text-white/80">
+          <ul className="list-none space-y-2 text-sm text-navy/70">
             <li className="flex items-start gap-2">
-              <span className="text-white/40">·</span>
-              <span>Lisible</span>
+              <span className="text-navy/40">·</span>
+              <span>Cartographie consolidée du dispositif</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white/40">·</span>
-              <span>Consolidé</span>
+              <span className="text-navy/40">·</span>
+              <span>Indicateurs de pilotage (%)</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white/40">·</span>
-              <span>Pilotable</span>
+              <span className="text-navy/40">·</span>
+              <span>Dispositif explicable à tout moment</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-white/40">·</span>
-              <span>Démontrable</span>
+              <span className="text-navy/40">·</span>
+              <span>Preuves structurées et accessibles</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-navy/40">·</span>
+              <span>Réduction de la dépendance aux individus</span>
             </li>
           </ul>
-          <p className="mt-4 text-sm font-medium text-white/90">
-            Indépendant des individus
-          </p>
         </div>
       </div>
 
       {/* Phrase finale */}
       <p className="mt-8 text-center font-serif italic text-navy/70 leading-relaxed max-w-2xl mx-auto">
-        Un dispositif qui fonctionne ne suffit pas. Il doit pouvoir être
-        expliqué, mobilisé et défendu à tout moment.
+        Un dispositif prêt à être présenté, expliqué et défendu en audit.
       </p>
     </div>
   );
